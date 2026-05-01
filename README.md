@@ -69,7 +69,7 @@ rest/
    npm install
    ```
 3. Set up environment variables:
-   Ensure your `backend/.env` file has the following (modify `MONGO_URI` if using Atlas):
+   Ensure your `backend/.env` file has all the credentials
 4. Start the server:
    ```bash
    npm start
