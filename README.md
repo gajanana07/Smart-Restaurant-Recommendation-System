@@ -5,6 +5,7 @@ A production-ready full-stack web application built using the MERN stack (MongoD
 ## 🚀 Tech Stack
 
 ### Backend
+
 - **Node.js** & **Express.js**: RESTful API creation
 - **MongoDB** & **Mongoose**: Database and ODM
 - **JWT (JSON Web Tokens)**: Authentication and authorization
@@ -12,6 +13,7 @@ A production-ready full-stack web application built using the MERN stack (MongoD
 - **Dotenv**: Environment variable management
 
 ### Frontend
+
 - **React (Vite)**: Fast, modern frontend framework
 - **Tailwind CSS**: Utility-first CSS framework for styling
 - **React Router DOM**: Client-side routing
@@ -52,6 +54,7 @@ rest/
 ## ⚙️ Setup Instructions
 
 ### Prerequisites
+
 - Node.js installed on your machine.
 - MongoDB installed locally or a MongoDB Atlas URI.
 
@@ -67,11 +70,6 @@ rest/
    ```
 3. Set up environment variables:
    Ensure your `backend/.env` file has the following (modify `MONGO_URI` if using Atlas):
-   ```env
-   PORT=5000
-   MONGO_URI=mongodb://localhost:27017/restaurant-recommendation
-   JWT_SECRET=supersecretjwtkey12345
-   ```
 4. Start the server:
    ```bash
    npm start
@@ -98,19 +96,23 @@ rest/
 ## 🌐 API Endpoints Summary
 
 ### Authentication (`/api/auth`)
+
 - `POST /register`: Register a new user
 - `POST /login`: Authenticate user and get token
 - `GET /me`: Get current logged-in user profile (Protected)
 
 ### Restaurants (`/api/restaurants`)
+
 - `GET /`: Get all restaurants (supports query params: `search`, `cuisine`, `rating`, `sort`, `page`)
 - `POST /`: Create a new restaurant (Protected)
 - `GET /:id`: Get single restaurant details
 
 ### Reviews (`/api/reviews`)
+
 - `POST /:restaurantId`: Add a review for a restaurant (Protected, one review per user)
 
 ### Favorites (`/api/favorites`)
+
 - `GET /`: Get logged-in user's favorite restaurants (Protected)
 - `POST /:restaurantId`: Toggle (add/remove) a restaurant to/from favorites (Protected)
 
